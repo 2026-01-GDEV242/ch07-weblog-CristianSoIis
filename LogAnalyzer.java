@@ -13,6 +13,7 @@ public class LogAnalyzer
 
     /**
      * Create an object to analyze hourly web accesses.
+     * 
      */
     public LogAnalyzer(String filename)
     { 
@@ -56,5 +57,17 @@ public class LogAnalyzer
         reader.printData();
     }
     
+    /**
+     * 
+     */
+    public int numberOfAccesses()
+    {
+        int total = 0;
+        for(int i = 0; i < hourCounts.length; i++)
+        {
+            total += hourCounts[i];
+        }
+        return total;
+    }
     
 }
