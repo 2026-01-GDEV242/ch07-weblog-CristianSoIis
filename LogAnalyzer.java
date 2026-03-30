@@ -1,8 +1,8 @@
 /**
  * Read web server data and analyse hourly access patterns.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version    2016.02.29
+ * @author Cristian Solis
+ * @version    2026.03.29
  */
 public class LogAnalyzer
 {
@@ -58,7 +58,8 @@ public class LogAnalyzer
     }
     
     /**
-     * 
+     * Uses a for loop that uses hourCounts array to get the data that 
+     * is stored into total and returns it.
      */
     public int numberOfAccesses()
     {
@@ -71,7 +72,9 @@ public class LogAnalyzer
     }
     
     /**
-     * 
+     * Similar to numberOfAccesses method but checks if amount is less then 
+     * a data point in the hourCounts array. If so sets the hours in that hour to amount
+     * and sets hour to i and in the end returns hour.
      */
     public int busiestHour()
     {
@@ -90,7 +93,8 @@ public class LogAnalyzer
     }
     
     /**
-     * 
+     * Same thing as busiestHour() method but looking for the smallest and uses a Integer.MAX_VALUE
+     * to make sure it doesn't do something wrong and returns i.
      */
     public int quietestHour()
     {
@@ -109,7 +113,8 @@ public class LogAnalyzer
     }
     
     /**
-     * 
+     * Looks through hourCounts.length-1 to prevent off by 1 as checks i and i+1 and if
+     * more then amount sets amount to hours in both and hour to i and returns i.
      */
     public int busiestTwoHour()
     {
